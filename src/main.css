@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f8f1d8;
+  display: flex;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#root {
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+}
+.main {
+  background-image: url(./Images/bg.jpg);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.text {
+  font-family: "Gruppo", cursive;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+.text-2 {
+  font-family: "Gruppo", cursive;
+  font-weight: 600;
+  font-size: 1em;
+}
+.tittle {
+  font-family: "Righteous", cursive;
+  font-size: 3em;
+}
+.logo {
+  font-family: "Gruppo", cursive;
+  font-size: 1em;
+  font-weight: 900;
+}
+.cursor {
+  cursor: url("./Images/cursor.png"), auto;
+}
+
+.pulser {
+  width: 5em;
+  height: 5em;
+  background: url("./Images/logos/linkedin.png");
+  background-position: center center;
+  background-size: cover;
+  border-radius: 50%;
+  position: relative;
+}
+
+.pulser::after {
+  animation: pulse 5000ms cubic-bezier(0, 0, 0.1, 0.1) infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 50%;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.pulser::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #c1272d;
+  border-radius: 50%;
+}
