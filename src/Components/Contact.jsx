@@ -11,7 +11,12 @@ const Contact = () => {
           <img src={nube} alt="character" className="h-[150px]" />
         </div>
         <div className="pb-12 px-2 ">
-          <div className="pulser cursor"></div>
+          <a
+            href="https://www.linkedin.com/in/ian-ortiz-aa6886221/"
+            target="blank"
+          >
+            <div className="pulser cursor"></div>
+          </a>
         </div>
         <div className="invisible sm:visible">
           <img src={nube2} alt="" className="h-[150px]" />
