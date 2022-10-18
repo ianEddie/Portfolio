@@ -31,6 +31,13 @@ body {
   font-weight: 600;
   font-size: 1em;
 }
+.text-3 {
+  font-family: "Gruppo", cursive;
+  font-weight:600;
+  font-size: 1.4em;
+  
+
+}
 .tittle {
   font-family: "Righteous", cursive;
   font-size: 3em;

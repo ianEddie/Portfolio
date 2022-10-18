@@ -7,11 +7,12 @@ const About = () => {
         <h1 className="tittle">About</h1>
       </div>
       <div className="w-full flex flex-wrap justify-around items-center gap-20">
-        <div className="flex justify-center self-start text w-1/2 pt-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident,
-          veritatis. Atque cumque quae ipsa soluta nobis harum natus! Sit
-          voluptates est a iusto explicabo distinctio deleniti nemo sequi aut
-          magni!
+        <div className="flex flex-wrap gap-y-1 justify-center w-1/2 text-3">
+          <div className="w-full">Mi nombre es Ian Ortiz, Desarrollador Web.</div>
+          <div className="w-full">
+            Soy un joven apasionado por el mundo del desarrollo digital. Me
+            desempeño con un gran afecto y compromiso por amor a la tecnologia.
+          </div>
         </div>
         <div className="flex justify-center items-center">
           <img src={character} alt="image" className="h-[300px]" />
