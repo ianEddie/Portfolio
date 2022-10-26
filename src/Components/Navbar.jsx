@@ -1,25 +1,26 @@
 import React from "react";
 import logo from "../Images/logo.png";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <section className="w-full h-[5vh] mt-1 flex justify-between">
       <div className="">
-        <a href="#main">
-        <img src={logo} alt="logo" className="h-8 cursor" />
-        </a>
+        <Link to={"/"}>
+          <img src={logo} alt="logo" className="h-8 cursor" />
+        </Link>
       </div>
       <div className="flex gap-3 px-5 items-center">
         <span className="text-2 cursor hover:text-red-800">
-          <a href="#about">About</a>
+          <Link to={"/about"}>About</Link>
         </span>
         <span className="text-2 cursor hover:text-red-800">
-          <a href="#skills">Skills</a>
+          <Link to={"/skills"}>Skills</Link>
         </span>
         <span className="text-2 cursor hover:text-red-800">
-          <a href="#projects">Projects</a>
+          <Link to={"/projects"}>Projects</Link>
         </span>
         <span className="text-2 cursor hover:text-orange-500">
-          <a href="#contact">Contact</a>
+          <Link to={"/contact"}>Contact</Link>
         </span>
       </div>
     </section>

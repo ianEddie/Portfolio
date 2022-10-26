@@ -1,21 +1,34 @@
 import React from "react";
 import character from "../Images/character.png";
+import { motion } from "framer-motion";
 const About = () => {
   return (
-    <section className="flex flex-wrap my-32 gap-10" id="about">
-      <div className="w-full flex justify-center items-center">
-        <h1 className="tittle">About</h1>
-      </div>
-      <div className="w-full flex flex-wrap justify-around items-center gap-20">
-        <div className="flex flex-wrap gap-y-1 justify-center w-1/2 text-3">
-          <div className="w-full">Mi nombre es Ian Ortiz, Desarrollador Web.</div>
-          <div className="w-full">
-            Soy un joven apasionado por el mundo del desarrollo digital. Me
-            desempeño con un gran afecto y compromiso por amor a la tecnologia.
-          </div>
+    <section className="flex flex-wrap h-[90vh] items-center" id="about">
+      {/* Title */}
+      <motion.h1
+        className="tittle w-full"
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1 }}
+      >
+        About
+      </motion.h1>
+      <div className="w-full flex flex-wrap justify-center gap-10">
+        {/* Text */}
+        <div className="w-1/2 text">
+          Mi nombre es Ian Ortiz, Desarrollador Web. Soy un joven apasionado por
+          el mundo del desarrollo digital. Me desempeño con un gran afecto y
+          compromiso por amor a la tecnologia.
         </div>
-        <div className="flex justify-center items-center">
-          <img src={character} alt="image" className="h-[300px]" />
+        {/* Image */}
+        <div className="flex justify-center p-3">
+          <motion.img
+            src={character}
+            alt="image"
+            className="h-[300px]"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1.5 }}
+          />
         </div>
       </div>
     </section>
