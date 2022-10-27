@@ -15,12 +15,12 @@ body {
   width: 100%;
   min-height: 100vh;
 }
-.main {
+/* .main {
   background-image: url(./Images/bg.jpg);
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-}
+} */
 .text {
   font-family: "Gruppo", cursive;
   font-weight: 600;

@@ -20,15 +20,16 @@ const Skills = () => {
         className="tittle w-full"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1}}
       >
         Skills
       </motion.h1>
+      {/*  */}
       <motion.div
         className="flex flex-wrap justify-center gap-10"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, delay:1 }}
       >
         {/* HTML */}
         <div>
