@@ -15,15 +15,10 @@ body {
   width: 100%;
   min-height: 100vh;
 }
-/* .main {
-  background-image: url(./Images/bg.jpg);
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-} */
+
 .text {
   font-family: "Gruppo", cursive;
-  font-weight: 600;
+  font-weight: bolder;
   font-size: 1.2em;
 }
 .text-2 {
@@ -33,10 +28,8 @@ body {
 }
 .text-3 {
   font-family: "Gruppo", cursive;
-  font-weight:600;
+  font-weight: 600;
   font-size: 1.4em;
-  
-
 }
 .tittle {
   font-family: "Righteous", cursive;

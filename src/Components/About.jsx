@@ -15,11 +15,16 @@ const About = () => {
       </motion.h1>
       <div className="w-full flex flex-wrap justify-center gap-10">
         {/* Text */}
-        <div className="w-1/2 text">
+        <motion.div
+          className="w-1/2 text"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1 }}
+        >
           Mi nombre es Ian Ortiz, Desarrollador Web. Soy un joven apasionado por
           el mundo del desarrollo digital. Me desempeño con un gran afecto y
           compromiso por amor a la tecnologia.
-        </div>
+        </motion.div>
         {/* Image */}
         <div className="flex justify-center p-3">
           <motion.img
@@ -27,7 +32,7 @@ const About = () => {
             alt="image"
             className="h-[300px]"
             animate={{ rotate: 360 }}
-            transition={{ duration: 1.5 }}
+            transition={{ duration: 1.5, delay: 1 }}
           />
         </div>
       </div>
