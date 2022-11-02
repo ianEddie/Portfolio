@@ -2,13 +2,20 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import linkedin from "../Images/logos/linkedin.png";
+import { useState } from "react";
 
 const Contact = () => {
   const form = useRef();
-
+  //
+  const [rotate, setRotate] = useState(false);
+  const handleClick = () => {
+    setRotate(!rotate);
+  };
+  //
   const sendEmail = (e) => {
     e.preventDefault();
     e.target.reset();
+    handleClick();
 
     emailjs
       .sendForm(
@@ -39,7 +46,9 @@ const Contact = () => {
         Contact
       </motion.h1>
       {/* Form */}
-      <form
+      <motion.form
+        animate={{ rotateY: rotate ? 360 : 0 }}
+        transition={{ duration: 3, delay: 0.5 }}
         ref={form}
         onSubmit={sendEmail}
         className="flex flex-wrap justify-center items-center w-full gap-y-5"
@@ -55,6 +64,7 @@ const Contact = () => {
             Nombre
           </motion.label>
           <motion.input
+            whileHover={{ scale: 1.08 }}
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -76,6 +86,7 @@ const Contact = () => {
             E-mail
           </motion.label>
           <motion.input
+            whileHover={{ scale: 1.08 }}
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1, delay: 1 }}
@@ -97,6 +108,7 @@ const Contact = () => {
             Mensaje
           </motion.label>
           <motion.textarea
+            whileHover={{ scale: 1.05 }}
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
@@ -119,16 +131,18 @@ const Contact = () => {
             Enviar
           </motion.button>
         </div>
-      </form>
+      </motion.form>
       <div className="w-full flex justify-center pt-5">
-        <motion.img
-          src={linkedin}
-          alt="logo"
-          className="h-14"
-          initial={{ y: 55, scale: 0 }}
-          animate={{ y: 0, scale: 1, rotate: 360 }}
-          transition={{ duration: 3, delay: 1}}
-        />
+        <a href="https://www.linkedin.com/in/ian-ortiz-aa6886221" target="blank">
+          <motion.img
+            src={linkedin}
+            alt="logo"
+            className="h-14 cursor"
+            initial={{ y: 55, scale: 0 }}
+            animate={{ y: 0, scale: 1, rotate: 360 }}
+            transition={{ duration: 3, delay: 1 }}
+          />
+        </a>
       </div>
     </section>
   );
